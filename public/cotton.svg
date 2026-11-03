@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360">
+  <filter id="cotton">
+    <feTurbulence type="fractalNoise" baseFrequency="0.011 0.009" numOctaves="4" seed="3"/>
+    <feColorMatrix type="saturate" values="0.3"/>
+    <feBlend in="SourceGraphic" mode="multiply"/>
+  </filter>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.92" numOctaves="1" seed="8"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.91  0 0 0 0 0.86  0 0 0 0.07 0"/>
+    <feComposite in2="SourceGraphic" operator="over"/>
+  </filter>
+  <rect width="360" height="360" fill="oklch(98.8% 0.0045 80)" filter="url(#grain)" opacity="0.6"/>
+  <rect width="360" height="360" filter="url(#cotton)" opacity="0.04"/>
+</svg>
